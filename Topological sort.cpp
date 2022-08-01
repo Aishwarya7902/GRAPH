@@ -7,11 +7,13 @@ PROBLEM:     https://practice.geeksforgeeks.org/problems/topological-sort/1
  
  PESUDO CODE FOR TOPOLOGICAL SORT
 1.sabki indegree nikal lo  ( use vector)
+create  a queue ,q
 2.jiski bhi indegree 0 hai usko q me dal do
-while(!q.empty())
-3.ek temp variable me q ke front ko store kar lo
+while(!q.empty()) {
+3.ek temp variable me q ke front ko store kar lo...pop()
 4.print /ans me add kar lo
-5.is vertex se jitne v connected edges hai unko indegree-- karo.....if it also comes to be 0 then push into queue
+5.is vertex se jitne v connected edges hai unko indegree ko reduce karo by 1 .....if it also comes to be 0 then push into queue
+}
 6.at last return ans vector
 
 Note: if no of elements in topological sort is less than total no of vertices initially in the graph ...it means ki graph has cycle.
