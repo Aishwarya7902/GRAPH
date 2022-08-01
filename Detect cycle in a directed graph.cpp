@@ -16,7 +16,7 @@ graph aa gaya it means koi cycle ni .....because we can apply topological sort o
 2.agr equal ni aaya it means kahin na kahin cycle hai graph me...hence return true.
 */
 
-Kahn's Algorithm(USING BFS)
+//Kahn's Algorithm(USING BFS)
 
 class Solution
 
