@@ -1,0 +1,6 @@
+for a directed acyclic graph topological sort is ....for every edge uv which is from u to v ...u comes before v...as simple as that.
+
+FEEL❤❤❤❤: jiski indegree sabse kam rahegi means wo sabse kam dependent hai kisi aur pe ...hence sorting me wo sabse pahle aayega.
+(coz independent log jyada powerful hote hain....like singles are happier than mingle😅.)
+
+indegree means jab koi edge ghus rahi vertex me to usko indegree bolenge.
