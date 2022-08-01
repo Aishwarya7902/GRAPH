@@ -4,3 +4,14 @@ FEEL❤❤❤❤: jiski indegree sabse kam rahegi means wo sabse kam dependent h
 (coz independent log jyada powerful hote hain....like singles are happier than mingle😅.)
 
 indegree means jab koi edge ghus rahi vertex me to usko indegree bolenge.
+
+PESUDO CODE FOR TOPOLOGICAL SORT
+1.sabki indegree nikal lo  ( use vector)
+2.jiski bhi indegree 0 hai usko q me dal do
+while(!q.empty())
+3.ek temp variable me q ke front ko store kar lo
+4.print /ans me add kar lo
+5.is vertex se jitne v connected edges hai unko indegree-- karo.....if it also comes to be 0 then push into queue
+6.at last return ans vector
+
+Note: if no of elements in topological sort is less than total no of vertices initially in the graph ...it means ki graph has cycle.
