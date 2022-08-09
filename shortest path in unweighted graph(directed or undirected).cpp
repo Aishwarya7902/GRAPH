@@ -8,8 +8,10 @@ TO BFS KA FAYDA YE HOGA KI WO SABE SHORTEST CHALEGA
 4.bahot simple hai bhai bahot simple
 
 5.dekho humlog kya karenge ki BFS algorithm hi use karenge aur usme kuch modification karenge ki distance bhi aa jaayega
-
+ 
+ 
 */
+VIDEO: https://youtu.be/yysA7ZM2jjA
 
 ALGORITHM: kuch ni bhai simple bfs hai with little modification
 
