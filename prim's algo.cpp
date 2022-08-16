@@ -52,3 +52,51 @@ class Solution
       return ans;  
     }
 };
+
+
+/* optimised
+tc: O(  (N+E) + nlogn) 
+sc: space for list and priority queue
+video:https://www.youtube.com/watch?v=oNTsS8lGDHw&t=265s
+*/
+class Solution
+{
+public:
+	//Function to find sum of weights of edges of the Minimum Spanning Tree.
+	//no need of parent here still we did coz striver bhaiya ne kiya tha
+    int spanningTree(int V, vector<vector<int>> adj[])
+    {
+        // code here
+        vector<int>key(V,INT_MAX);
+        vector<bool>mst(V,false);
+        priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
+        
+    
+        key[0]=0;
+        pq.push({0,0});
+        while(!pq.empty()){
+           int u=pq.top().second;
+           
+            pq.pop();
+            
+            mst[u]=true;
+            for(auto it:adj[u]){
+                
+                int x=it[0];
+                int wt=it[1];
+                if(mst[x]==false && wt<key[x]){
+                key[x]=wt;
+                pq.push({key[x],x});
+                }
+            }
+            
+            
+        }
+        int sum=0;
+        for(auto it:key){
+                sum+=it;
+            }
+      return sum;  
+    }
+};
+
