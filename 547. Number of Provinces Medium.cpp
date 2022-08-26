@@ -23,13 +23,54 @@ public:
     int findCircleNum(vector<vector<int>>& isConnected) {
        int n= isConnected.size(); 
        vector<bool>visited(n+1,false);
-       vector<int> adj[209];
+       vector<int> adj[209]; //array of vector
        for(int i=0;i<n;i++){
            for(int j=0;j<n;j++){
               
                if(isConnected[i][j]==1){
                    adj[i].push_back(j);
                    
+               }
+           }
+       }
+       
+        int cnt=0;
+       for(int i=0;i<n;i++){
+           if(!visited[i]){
+           
+           dfs(i,adj,visited);
+               cnt++;
+           }
+       }
+ return cnt;
+    }
+};
+
+
+/*same approach but using vector*/
+
+class Solution {
+public:
+    void dfs(int s,vector<vector<int>>&adj,vector<bool>&visited){
+     visited[s]=true;
+        //
+        for(auto u:adj[s]){
+            
+               if(!visited[u])
+                dfs(u,adj,visited);
+        }
+        
+    }
+    int findCircleNum(vector<vector<int>>& isConnected) {
+       int n= isConnected.size(); 
+       vector<bool>visited(n+1,false);
+       vector<vector<int>>adj(n);
+       for(int i=0;i<n;i++){
+           for(int j=0;j<n;j++){
+              
+               if(isConnected[i][j]==1){
+                   
+                 adj[i].push_back(j)  ;
                }
            }
        }
