@@ -3,13 +3,15 @@ problem: https://practice.geeksforgeeks.org/problems/strongly-connected-componen
  
 FEEL ❤❤❤❤❤ : yar kosaraju kuch bhi ni hai bas 3 simple steps apply karna hai
 1.find toposort ..toposort isliye find kar rahe coz isse wo node jisme sabse kam edges aa rahe wo stack me sabse last me aayega 
+topo sort me yahi to karte the na ki connected edges ko phle stack me dalte the and at last jab sare adjacent traverse kar liye then khud ko stack me dala
+this will ensure that for every u->v...u will come first as it will be on top of stack
 video: https://www.youtube.com/watch?v=Yh6EFazXipA&t=1s (simplest explaination by striver bhaiya)
 
 2.transpose the graph ...reverse isliye kar rahe coz hum dusre ke component me na ghuse....dekho jo ek hi scc me honge unme edge reverse bhi kar do 
   to fark ni padega...tab bhi wo scc hi rahega...lekin agr component dusre ka hai to us case me hum edge reverse kar denge to us component me ni jayenge
   that is what we want
   
-3.apply reversedfs(kuch ni bhai simple dfs hi laaga rahe bas fancy name de diya hai...darne ki koi bat ni) on the oredering we got from topo sort
+3.apply reversedfs(kuch ni bhai simple dfs hi laaga rahe bas fancy name de diya hai...darne ki koi bat ni) on the ordering we got from topo sort
 
 
 
