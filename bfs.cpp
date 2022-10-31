@@ -5,6 +5,7 @@ visited[s]=true;
   while(!q.empty()){
   int v=q.front();
     q.pop();
+    cout<<v<<" ";
     for(int v:adj[u]){
     if(visited[v]==false){
     visited[v]=true;
