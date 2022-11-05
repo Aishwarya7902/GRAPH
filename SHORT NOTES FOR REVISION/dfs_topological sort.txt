@@ -1,5 +1,7 @@
+🎥🎥🎥🎥🎥 VIDEO EXPLAINATION:   (STRIVER BHAIYA)  https://www.youtube.com/watch?v=5lZ0iJMrUMk
 
-🟦🟦🟦🟦1.
+
+🟦🟦🟦🟦1. WHY DFS ENSURES TOPOSORT
 The main question that might come to your mind is that how will dfs ensure toposort i.e for every edge u->v ....u will come before v....and this will be true 
 for every single edge
 
@@ -22,7 +24,7 @@ them ,then source will be printed first and adjacent vertex later (LIFO PRINCIPL
 3: Push current vertex to stack which stores result.
 
 
-🟦🟦🟦🟦🟦2.
+🟦🟦🟦🟦🟦2. WHY ONLY VALID FOR DAG
 NOTE: toposort is valid only in directed acyclic graph
 now the question is why directed
 let's reveal
@@ -33,5 +35,52 @@ so by the defination of toposort for every u->v....u should come before v
  2->1
  so how will u ensure that 1 will come before 2 and at the same time 2 will come before 1
  hence toposort is not applicable in undirected graph
+ 
+ 🟦🟦🟦🟦🟦3. PSEUDO CODE
+ the coding part is quite similar to dfs with slight modification
+ chnages
+ 1.in the main function while calling dfs...pass a stack slong with
+ 2.in dfs function...do simple dfs and once u have traversed alll the adjacent edges....push the source node in stack
+ 3.print the elements of stack to get the topo sort
+ 
+ 🟦🟦🟦🟦🟦4. CODING TIME 😍
+ class Solution
+ {
+ 
+    private:
+    void dfs(vector<int>adj[],vector<bool>&vis,stack<int>&st,int source){
+        vis[source]=1;
+        for(auto it:adj[source]){
+            if(!vis[it]){
+                dfs(adj,vis,st,it);
+            }
+        }
+        st.push(source);
+    }
+    
+	public:
+	//Function to return list containing vertices in Topological order. 
+	vector<int> topoSort(int V, vector<int> adj[]) 
+	{
+	    // code here
+	    vector<int>ans;
+	    vector<bool>vis(V+1,0);
+	    stack<int>st;
+	    for(int i=0;i<V;i++){
+	        if(!vis[i]){
+	            dfs(adj,vis,st,i);
+	        }
+	    }
+	   while(!st.empty()){
+	       ans.push_back(st.top());
+	       st.pop();
+	   } 
+	   return ans;
+	}
+ };
+ 
+🟦🟦🟦🟦🟦5. TIME AND SPACE COMPLEXITY⌚🚀
+TC: O(V+E) SAME AS DFS
+SC: SAME AS DFS
  
 
