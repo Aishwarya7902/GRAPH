@@ -1,0 +1,37 @@
+
+🟦🟦🟦🟦1.
+The main question that might come to your mind is that how will dfs ensure toposort i.e for every edge u->v ....u will come before v....and this will be true 
+for every single edge
+
+so let's reveal it 😎
+
+Algorithm using Depth First Search
+Step 1: Create a temporary stack
+Step 2: Recursively call topological sorting for all its adjacent vertices
+Note: A vertex is pushed to stack only when all of its adjacent vertices (and their adjacent vertices and so on) are already in stack.
+Step 3: Atlast, print contents of stack.
+
+def topologicalSortUtil(int v, bool visited[],stack<int> &Stack):
+1: Mark the current node as visited.
+2: Recur for all the vertices adjacent to this vertex who are not already visited......( 🙌 ruko this is the crux step.....yahan u can see that humne source
+node ke sare adjacent pe dfs
+call karne ke bad hi ,source ko stack me push kiya....and jab adjacent ka dfs call hoga to wo apne adjacent ke dfs ko call karega and at last khud ko
+stack me dalega .....now this will make sure ki adjacent comes first in stack and source will come later.....hence when we pop elements from stack and print 
+them ,then source will be printed first and adjacent vertex later (LIFO PRINCIPLE OF STACK)....hence this ensured THAT for u->v ....u will come first than v
+
+3: Push current vertex to stack which stores result.
+
+
+🟦🟦🟦🟦🟦2.
+NOTE: toposort is valid only in directed acyclic graph
+now the question is why directed
+let's reveal
+so by the defination of toposort for every u->v....u should come before v 
+ if 1-2 bi-direction
+ 
+ 1->2
+ 2->1
+ so how will u ensure that 1 will come before 2 and at the same time 2 will come before 1
+ hence toposort is not applicable in undirected graph
+ 
+
