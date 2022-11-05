@@ -1,0 +1,15 @@
+hai kya?🤔
+to dekho bhai 
+for any directed acyclic graph
+for any vertex u->v...... in toposort u should come before v and this should hold true for every vertex
+ 
+ 
+PRACTICAL APPLICATIONS:
+
+let say tumhe koi course padhna hai....quantum physics padhne se pahle tumhe classical physics aani chahiye ....classical physics se pahle tumhe basic science 
+aani chahiye
+
+graph here
+basic science->classical phy->quantum phy
+
+hence topo sort will be :basic science ,classical phy,quantum phy
