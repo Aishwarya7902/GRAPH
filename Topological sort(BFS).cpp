@@ -3,7 +3,9 @@ PROBLEM:     https://practice.geeksforgeeks.org/problems/topological-sort/1
 /*     #initial approach
  (coded on my own after watching the intution)
  video : https://www.youtube.com/watch?v=UnzIqUy8pnI
- TC: O(V+E)
+         https://www.youtube.com/watch?v=73sneFXuTEg(striver bhaiya)
+ TC: O(V+E)  //same as bfs
+ SC: O(V+E) //same as bfs
  
  PESUDO CODE FOR TOPOLOGICAL SORT
 1.sabki indegree nikal lo  ( use vector)
