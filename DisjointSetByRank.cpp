@@ -1,3 +1,5 @@
+video: (striver bhaiya) https://www.youtube.com/watch?v=aBxjDBC4M1U&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=46
+//tc :o(4alpha) which is nearly about constant (it has a huge mathematical derivation...and interviewer is not gonna ask u...he will only focus on ur logic.
 #include <bits/stdc++.h>
 using namespace std;
 class DisjointSet{
