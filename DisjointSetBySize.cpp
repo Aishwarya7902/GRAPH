@@ -25,7 +25,7 @@ class DisjointSet{
     void FindUnionBySize(int u,int v){
         int ulP_u=FindUParent(u);
         int ulP_v=FindUParent(v);
-        if([ulP_v]==rulP_u)return;
+        if(ulP_v==ulP_u)return;
         if(rank[ulP_v]<rank[ulP_u]){
             parent[ulP_v]=ulP_u;
             size[ulP_u]+=size[ulP_v];
