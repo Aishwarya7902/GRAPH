@@ -22,7 +22,7 @@ class DisjointSet{
   
   //union
     
-    void FindUnionByRank(int u,int v){
+    void FindUnionBySize(int u,int v){
         int ulP_u=FindUParent(u);
         int ulP_v=FindUParent(v);
         if([ulP_v]==rulP_u)return;
@@ -36,4 +36,5 @@ class DisjointSet{
             size[ulP_v]+=size[ulP_u];
         }
     }
+};
     
