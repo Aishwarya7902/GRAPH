@@ -1,13 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 class DisjointSet{
-    vector<int>rank,parent;
+    vector<int>rank,parent,size;
     public:
     DisjointSet(int n){
         rank.resize(n+1,0);
+        size.resize(n+1,0)
         parent.resize(n+1,0);
         for(int i=0;i<=n;i++){
             parent[i]=i;
+            size[i]=1;
         }
     }
   
@@ -22,7 +24,7 @@ class DisjointSet{
     void FindUnionByRank(int u,int v){
         int ulP_u=FindUParent(u);
         int ulP_v=FindUParent(v);
-        if([ulP_v]==rulP_u)return;
+        if(ulP_v==ulP_u)return;
         if(rank[ulP_v]<rank[ulP_u]){
             parent[ulP_v]=ulP_u;
         }
@@ -37,7 +39,7 @@ class DisjointSet{
     void FindUnionBySize(int u,int v){
         int ulP_u=FindUParent(u);
         int ulP_v=FindUParent(v);
-        if([ulP_v]==rulP_u)return;
+        if(ulP_v==ulP_u)return;
         if(rank[ulP_v]<rank[ulP_u]){
             parent[ulP_v]=ulP_u;
             size[ulP_u]+=size[ulP_v];
